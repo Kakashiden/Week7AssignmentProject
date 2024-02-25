@@ -8,9 +8,9 @@ import project.exception.DbException;
 
 public class DbConnection {
 
-	private static final String SCHEMA = "recipes";
-	private static final String USER = "recipes";
-	private static final String PASSWORD = "recipes";
+	private static final String SCHEMA = "projects";
+	private static final String USER = "projects";
+	private static final String PASSWORD = "projects";
 	private static final String HOST = "localhost";
 	private static final int PORT = 3306;
 
