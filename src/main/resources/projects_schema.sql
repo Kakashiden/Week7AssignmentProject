@@ -2,10 +2,10 @@ DROP TABLE IF EXISTS step;
 DROP TABLE IF EXISTS project_category;
 DROP TABLE IF EXISTS material;
 DROP TABLE IF EXISTS category;
-DROP TABLE IF EXISTS projects;
+DROP TABLE IF EXISTS project;
 
 
-CREATE TABLE projects (
+CREATE TABLE project (
 	project_id INT AUTO_INCREMENT NOT NULL,
 	project_name VARCHAR(128) NOT NULL,
 	estimated_hours TIME,
@@ -22,7 +22,7 @@ CREATE TABLE material (
 	num_required INT,
 	cost DECIMAL(7,2),
 	PRIMARY KEY (material_id),
-	FOREIGN KEY (project_id) REFERENCES projects (project_id) ON DELETE CASCADE
+	FOREIGN KEY (project_id) REFERENCES project (project_id) ON DELETE CASCADE
 );
 
 CREATE TABLE step (
@@ -31,7 +31,7 @@ project_id INT NOT NULL,
 step_text TEXT NOT NULL,
 step_order INT not null,
 PRIMARY KEY (step_id),
-FOREIGN KEY (project_id) REFERENCES projects (project_id) ON DELETE CASCADE
+FOREIGN KEY (project_id) REFERENCES project (project_id) ON DELETE CASCADE
 );
 
 

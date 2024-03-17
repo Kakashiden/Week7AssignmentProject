@@ -20,7 +20,7 @@ import provided.util.DaoBase;
 public class ProjectDao extends DaoBase {
   private static final String CATEGORY_TABLE = "category";
   private static final String MATERIAL_TABLE = "material";
-  private static final String PROJECT_TABLE = "projects";
+  private static final String PROJECT_TABLE = "project";
   private static final String PROJECT_CATEGORY_TABLE = "project_category";
   private static final String STEP_TABLE = "step";
 
