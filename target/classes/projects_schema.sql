@@ -8,8 +8,8 @@ DROP TABLE IF EXISTS project;
 CREATE TABLE project (
 	project_id INT AUTO_INCREMENT NOT NULL,
 	project_name VARCHAR(128) NOT NULL,
-	estimated_hours TIME,
-	actual_hours TIME,
+	estimated_hours BigDecimal,
+	actual_hours BigDecimal,
 	difficulty INT,
 	notes TEXT,
 	PRIMARY KEY (project_id)
@@ -36,7 +36,7 @@ FOREIGN KEY (project_id) REFERENCES project (project_id) ON DELETE CASCADE
 
 
 CREATE TABLE category (
-	category_id INT AUTO_INCREMENT NOT NULL,
+	category_id INT NOT NULL,
 	category_name VARCHAR(64) NOT NULL,
 	PRIMARY KEY (category_id)
 );
